@@ -96,17 +96,15 @@ function loadPictures() {
   });
 
   const playText = new PIXI.Text('Spin', style);
-
   playText.x = Math.round(button.width - playText.width * 5);
   playText.y = root.screen.height / 2 - playText.width / 2;
   button.addChild(playText);
 
   root.stage.addChild(button);
-
   button.interactive = true;
   button.buttonMode = true;
 
-  button.addListener('click', () => {
+  button.addListener('pointerup', () => {
     start();
   });
 
