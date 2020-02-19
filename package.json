@@ -1,6 +1,7 @@
 {
   "name": "pixi_project",
   "version": "1.0.0",
+  "homepage": "https://anastasiiakonovalenko.github.io/slot-machine-pixi.js/",
   "description": "",
   "main": "app.js",
   "scripts": {
@@ -9,8 +10,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "author": "Mate academy",
-  "license": "GPL-3.0",
+  "author": "",
   "devDependencies": {
     "@mate-academy/eslint-config": "*",
     "@mate-academy/htmllint-config": "*",
