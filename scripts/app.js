@@ -7,7 +7,7 @@ const Sprite = PIXI.Sprite;
 
 const root = new Application({
   backgroundColor: 0x1099bb,
-  width: window.screen.width,
+  width: 600,
   height: 195,
 });
 
@@ -75,29 +75,24 @@ function loadPictures() {
 
   root.stage.addChild(reelContainer);
 
-  const margin = (root.screen.height - IMG_SIZE * 3);
-
-  reelContainer.y = margin;
-  reelContainer.x = root.screen.width / 2 - reelContainer.width / 2;
-
   const button = new PIXI.Graphics();
 
-  button.beginFill(0, 1);
-  button.drawRect(0, IMG_SIZE * 3 + margin, root.screen.width, margin);
+  button.beginFill(0x1099bb, 1);
+  button.drawRect(500, 50, 90, 50);
 
   const style = new PIXI.TextStyle({
     fontFamily: 'Arial',
     fontSize: 36,
     fontStyle: 'italic',
     fontWeight: 'bold',
-    fill: ['#ffffff', '#20c5ff'], // gradient
+    fill: ['#ffffff', '#20c5ff'],
     stroke: '#11296d',
     strokeThickness: 5,
   });
 
   const playText = new PIXI.Text('Spin', style);
-  playText.x = Math.round(button.width - playText.width * 5);
-  playText.y = root.screen.height / 2 - playText.width / 2;
+  playText.x = 502;
+  playText.y = 56;
   button.addChild(playText);
 
   root.stage.addChild(button);
